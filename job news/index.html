@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job News from Top MNCs</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+</head>
+<body>
+     <nav class="navbar" style="margin-top: -20px; width: 100%;">
+        <div class="navbar-left">
+            <a href="index.html" class="logo"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+                    style="height: 50px;"></a>
+            <div class="search-box">
+                <img src="images/search.png">
+                <input type="text" placeholder="search">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="../index.html" class="active-link"><img src="home.png"> <span>Home</span></a></li>
+                <!-- <li><a href="#"><img src="images/network.png"> <span>Network</span></a></li> -->
+                <li><a href="../job news/index.html"><img src="jobs.png"> <span>Jobs</span></a></li>
+                <li><a href="#"><img src="notification.png"> <span>Notitfication</span></a></li>
+                <li><a href="../chatbot.html"><span class="material-symbols-outlined" style="color: #00000099;">
+                    smart_toy
+                </span>Chatbot</a></li>
+                <li><div id="openModalBtn" class="me">
+                    <button class="f">
+                    <div class="down">
+                      <span style="color: gray;">Sign In</span>
+                    </div></button>
+                  </div></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+                <img src="Untitled design.png" class="nav-profile-img"
+                    onclick="toggleMenu()">
+            </div>
+        </div>
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="images/user-1.png">
+                    <div>
+                        <h3>Anshika Phul</h3>
+                        <a href="#">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/setting.png">
+                    <p>Setting & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/display.png">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/logout.png">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+    </nav>
+    <main>
+        
+        <div id="job-list" class="job-list"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

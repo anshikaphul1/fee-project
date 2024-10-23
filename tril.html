@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+                    style="height: 50px;"></a>
+            <div class="search-box">
+                <img src="images/search.png">
+                <input type="text" placeholder="search">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="#" class="active-link"><img src="images/home.png"> <span>Home</span></a></li>
+                <li><a href="#"><img src="images/network.png"> <span>Network</span></a></li>
+                <li><a href="#"><img src="images/jobs.png"> <span>Jobs</span></a></li>
+                <li><a href="#"><img src="images/message.png"> <span>Messaging</span></a></li>
+                <li><a href="#"><img src="images/notification.png"> <span>Notitfication</span></a></li>
+                <li><div id="openModalBtn" class="me">
+                    <!-- <img src="images/download.jpeg" id="img" class="icon"> -->
+                    <div class="down">
+                      <h4>Sign In</h4>
+                    </div>
+                  </div></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+                <img src="WhatsApp Image 2024-09-04 at 16.25.55.jpeg" class="nav-profile-img"
+                    onclick="toggleMenu()">
+            </div>
+        </div>
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="images/user-1.png">
+                    <div>
+                        <h3>Anshika Phul</h3>
+                        <a href="#">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/setting.png">
+                    <p>Setting & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/display.png">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/logout.png">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+    </nav>
+    <!-- nav bar end -->
+    <div class="container">
+        <!-- left sidebar -->
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <a href="images/Beige Modern Elegant Personal LinkedIn Banner.png"><img
+                        src="Screenshot 2024-09-04 at 4.24.07 PM.png" width="100%"
+                        style="border-radius: 10%;"></a>
+                <div class="sidebar-profile-info">
+                    <img src="WhatsApp Image 2024-09-04 at 16.25.55.jpeg">
+                    <h1 id="username">Username</h1>
+                    <h3>Student at Chitkara University</h3>
+                    <ul>
+                        <li>Your profile views<span>300</span></li>
+                        <li>Your post views<span>300</span></li>
+                        <li>Your Connections<span>357</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href="#"><img src="images/items.png">My items</a>
+                    <a href="#"><img src="images/premium.png">Try Premium</a>
+                </div>
+            </div>
+            <div class="sidebar-activity">
+                <h3>RECENT</h3>
+                <a href="#"><img src="images/recent.png">Web Development</a>
+                <a href="#"><img src="images/recent.png">User Interface</a>
+                <a href="#"><img src="images/recent.png">Online Learning</a>
+                <a href="#"><img src="images/recent.png">Learn Online</a>
+                <a href="#"><img src="images/recent.png">Code Better</a>
+                <a href="#"><img src="images/recent.png">Group Learning</a>
+                <h3>GROUPS</h3>
+                <a href="#"><img src="images/group.png">Web Design Group</a>
+                <a href="#"><img src="images/group.png">HTML & CSS Learners</a>
+                <a href="#"><img src="images/group.png">Python & Javascript Group</a>
+                <a href="#"><img src="images/group.png">Learn Coding Online</a>
+                <h3>HASHTAG</h3>
+                <a href="#"><img src="images/hashtag.png">Web Development</a>
+                <a href="#"><img src="images/hashtag.png">Userinterface</a>
+                <a href="#"><img src="images/hashtag.png">online learning</a>
+                <div class="discover-more-link">
+                    <a href="#">Discover More</a>
+                </div>
+            </div>
+        </div>
+        <!-- main content -->
+        <div class="main-content">
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="WhatsApp Image 2024-09-04 at 16.25.55.jpeg">
+                    <textarea rows="2" placeholder="Write a post"></textarea>
+                </div>
+                <div class="create-post-links">
+                    <li><img src="images/photo.png">Photo</li>
+                    <li><img src="images/video.png">Video</li>
+                    <li><img src="images/event.png">Event</li>
+                    <li>Post</li>
+                </div>
+            </div>
+            <div id="modal" class="modal shadow__btn">
+                <div class="modal-content">
+                  <span class="close-btn">×</span>
+                  <h2 class="signin-title">Sign In</h2>
+                  <form id="signinForm">
+                    <div class="form__group field">
+                      <label for="username" class="form__label">Username</label>
+                      <input 
+                        type="text" 
+                        class="form__field" 
+                        id="username" 
+                        placeholder="Enter your username" 
+                        required />
+                    </div>
+              
+                    <div class="form__group field">
+                      <label for="password" class="form__label">Password</label>
+                      <input 
+                        type="password" 
+                        class="form__field" 
+                        id="password" 
+                        placeholder="Enter your password" 
+                        required />
+                    </div>
+              
+                    <button type="submit" class="btn-primary">Sign In</button>
+              
+                    <div class="form-footer">
+                      <p>New to LinkedIn? <a href="#">Join now</a></p>
+                      <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              
+            <div class="sort-by">
+                <hr>
+                <p>Sort by: <span>top <img src="images/down-arrow.png"></span></p>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img src="WhatsApp Image 2024-09-04 at 16.25.55.jpeg">
+                    <div>
+                        <h1>Shivam Pandey</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam vel corrupti, sunt voluptatum optio
+                    necessitatibus sequi debitis consequuntur omnis nemo, tempore vitae autem quam non, rerum neque
+                    eaque reiciendis impedit.</p>
+                <img src="images/post-image-1.png" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares
+                        </span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/WhatsApp Image 2024-08-24 at 11.18.27 PM.png" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>send</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-3.png">
+                    <div>
+                        <h1>Darpan Mehta</h1>
+                        <small>Founder and CEO at </small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet perferendis voluptatum magnam culpa
+                    enim odit tempora. Voluptatem, quisquam illum, mollitia tenetur dolorem facere, ipsa consequatur
+                    quidem error eaque rerum repellat!</p>
+                <img src="images/post-image-2.png" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares
+                        </span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/WhatsApp Image 2024-08-24 at 11.18.27 PM.png" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>send</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-4.png">
+                    <div>
+                        <h1>Asher Sharma</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure veniam ullam sint. Cum doloremque
+                    expedita dolorem magnam voluptatibus consequatur temporibus fugiat saepe illum aliquam quidem,
+                    maiores reiciendis odio commodi quae.</p>
+                <img src="images/post-image-3.png" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares
+                        </span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/WhatsApp Image 2024-08-24 at 11.18.27 PM.png" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>send</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-5.png">
+                    <div>
+                        <h1>Shivam Pandey</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quis eveniet minus quae tempora
+                    sapiente soluta autem ex modi praesentium tenetur expedita fugiat magni facilis perspiciatis
+                    consectetur, qui aperiam voluptatem!</p>
+                <img src="images/post-image-6.png" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares
+                        </span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/WhatsApp Image 2024-08-24 at 11.18.27 PM.png" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>send</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-6.png">
+                    <div>
+                        <h1>Nischay Gupta</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nulla autem, temporibus eveniet
+                    dolorum nam sed dolorem. Maiores vero omnis, beatae, illum delectus fuga tempore accusamus quisquam
+                    minima quo culpa.</p>
+                <img src="images/post-image-8.png" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares
+                        </span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/WhatsApp Image 2024-08-24 at 11.18.27 PM.png" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>send</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-7.png">
+                    <div>
+                        <h1>Nischay Gupta</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>The success of every website depends on search engine optimization and digital marketing strategy. If
+                    you are on first page of all major search engines then you are ahead among your competitors.</p>
+                <img src="images/post-image-10.png" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares
+                        </span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/WhatsApp Image 2024-08-24 at 11.18.27 PM.png" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>send</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-5.png">
+                    <div>
+                        <h1>Ashmit Sharma</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>The success of every website depends on search engine optimization and digital marketing strategy. If
+                    you are on first page of all major search engines then you are ahead among your competitors.</p>
+                <img src="images/post-image-9.png" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares
+                        </span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/WhatsApp Image 2024-08-24 at 11.18.27 PM.png" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>send</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- right sidebar -->
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <img src="images/more.png" class="info-icon">
+                <h3>Trending News</h3>
+                <a href="#">VC funding booms in India</a>
+                <span>4h ago &middot; 10,934 readers</span>
+
+                <a href="#">Internships are getting longer</a>
+                <span>5h ago &middot; 1,934 readers</span>
+
+                <a href="#">Indians go big on travel abroad</a>
+                <span>4h ago &middot; 27,560 readers</span>
+
+                <a href="#">More hiring= higher confidence?</a>
+                <span>18h ago &middot; 8,208 readers</span>
+
+                <a href="#">Banks boosts tech talent</a>
+                <span>6h ago &middot; 900 readers</span>
+
+                <a href="#" class="read-more-link">Read More</a>
+            </div>
+            <div class="sidebar-ad">
+                <small>Ad &middot; &middot; &middot;</small>
+                <p>Master the 5 principles of web design</p>
+                <div>
+                    <img src="WhatsApp Image 2024-09-04 at 16.25.55.jpeg"
+                        style="border-radius:60%; height:55px">
+                    <img src="images/mi-logo.png">
+                </div>
+                <b>Brand and Demand in Xiomi</b>
+                <a href="#" class="ad-link">Learn More</a>
+            </div>
+
+            <footer class="sidebar-useful-links">
+                <a href="https://about.linkedin.com/">About</a>
+                <a href="https://www.linkedin.com/accessibility">Accessibility</a>
+                <a href="https://www.linkedin.com/help/linkedin?trk=footer_d_flagship3_notifications">Help Center</a>
+                <a href="https://www.linkedin.com/legal/privacy-policy">Privacy Policy</a>
+                <a
+                    href="https://business.linkedin.com/marketing-solutions/ads-i?trk=n_nav_ads_rr_b&src=li-nav&veh=ad%2Fstart&adobe_mc_sdid=SDID%3D26840758BC93F983-3B9B4D5F9F720A0D%7CMCORGID%3D14215E3D5995C57C0A495C55%40AdobeOrg%7CTS%3D1728926025&adobe_mc_ref=https%3A%2F%2Fwww.linkedin.com%2F">Advertising</a>
+                <a href="#">Get the App</a>
+                <a href="#">More</a>
+                <div class="copyright-message">
+                    <img src="images/logo.png">
+                    <p>LinkedIn &#169; 2024. All right reserved</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    </div>
+    <script>
+        let profileMenu = document.getElementById("profileMenu");
+        function toggleMenu() {
+            profileMenu.classList.toggle("open-menu");
+        }
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
